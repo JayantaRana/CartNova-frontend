@@ -1,0 +1,189 @@
+.navbar {
+  background-color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  padding: 10px 10%;
+  color: var(--white);
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 22px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/* Search Box Styles */
+.navbar-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 2px;
+  padding: 0 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.search-icon {
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+/* Nav Items (Profile & Cart) */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Profile Dropdown Logic */
+.profile-container {
+  position: relative;
+  padding: 10px 0;
+}
+
+.profile-dropdown {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  color: var(--text-dark);
+  min-width: 150px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.profile-container:hover .profile-dropdown {
+  display: block; /* Show on hover */
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-grey);
+}
+
+.admin-link {
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 0;
+}
+
+
+
+
+/* ******************** */
+
+/* 1. Add padding to the container to bridge the gap */
+.profile-container {
+  position: relative;
+  padding: 15px 0; /* Increased vertical padding to act as a bridge */
+  cursor: pointer;
+}
+
+/* 2. Adjust the dropdown position to align with the bridge */
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions it exactly at the bottom of the container */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  color: var(--text-dark);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Slightly deeper shadow for depth */
+  border-radius: 4px;
+  padding: 5px 0;
+  z-index: 2000;
+}
+
+/* 3. The "Invisible Shield" (The Secret Sauce) */
+.profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* Matches the gap height */
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: transparent; /* Invisible but keeps the hover active */
+}
+
+/* Keep the rest of your hover logic */
+.profile-container:hover .profile-dropdown {
+  display: block;
+}
+
+.profile-dropdown::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--white) transparent;
+}
+
+
+/* ............. */
+.cart-icon-container {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 5px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;     
+  left: 12px;   
+  background-color: #ff6161; 
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white; 
+}
+
+.cart-text {
+  font-weight: 500;
+  margin-left: 10px;
+}

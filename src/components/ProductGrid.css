@@ -1,0 +1,77 @@
+/* ========================================================================
+   1. FOR YOU TAB: Horizontal Scroll Row Style
+   ======================================================================== */
+.product-grid-scrollable {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden; /* Prevents awkward vertical jumping */
+  gap: 16px;
+  padding: 10px 5px;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+/* 🟢 FORCED BREAKPOINT FOR THE CARDS (Fixes compression/no-scroll) */
+.product-grid-scrollable > * {
+  flex: 0 0 auto; /* Tells flexbox: don't alter sizes dynamically */
+  width: 240px;  /* Forces a clean, standard width card layout */
+  min-width: 240px; /* Absolutely prevents shrinking */
+}
+
+/* Optional standard scrollbar custom accents for desktop mice users */
+.product-grid-scrollable::-webkit-scrollbar {
+  height: 6px;
+}
+.product-grid-scrollable::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+/* ========================================================================
+   2. CATEGORY TAB: Uniform Vertical Grid Style 
+   ======================================================================== */
+.category-vertical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 15px 0;
+}
+
+/* ========================================================================
+   3. SHARED LAYOUT STYLES
+   ======================================================================== */
+.home-products-container, .category-view-container {
+  padding: 20px;
+}
+
+.product-section {
+  margin-bottom: 35px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.no-products {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}

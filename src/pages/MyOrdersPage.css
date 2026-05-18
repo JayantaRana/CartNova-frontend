@@ -1,0 +1,334 @@
+.orders-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.page-title {
+  font-size: 22px;
+  color: #212121;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.order-group-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  overflow: hidden;
+}
+
+.order-header-banner {
+  background-color: #f5f7fa;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.banner-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-label {
+  font-size: 11px;
+  color: #718096;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.banner-value {
+  font-size: 14px;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.price-highlight {
+  color: #212121;
+  font-weight: 600;
+}
+
+.reference-id {
+  color: #4a5568;
+  font-family: monospace;
+}
+
+.status-column {
+  margin-left: auto;
+  justify-content: center;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.success, .status-badge.confirmed, .status-badge.delivered {
+  background-color: #e6fffa;
+  color: #047481;
+}
+
+.status-badge.pending {
+  background-color: #fefcbf;
+  color: #975a16;
+}
+
+/* Items Grid Row Mapping Layout */
+.order-items-list {
+  padding: 10px 20px;
+}
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item-row:last-child {
+  border-bottom: none;
+}
+
+.item-thumbnail-wrapper {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+.item-thumbnail {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.item-details-main {
+  flex: 2;
+  padding: 0 20px;
+}
+
+.item-product-name {
+  font-size: 15px;
+  color: #212121;
+  margin: 0 0 6px 0;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.item-product-name:hover {
+  color: #2874f0;
+  cursor: pointer;
+}
+
+.item-meta-category {
+  font-size: 13px;
+  color: #718096;
+  margin: 0 0 4px 0;
+}
+
+.item-meta-category span {
+  color: #4a5568;
+}
+
+.item-meta-qty {
+  font-size: 13px;
+  color: #4a5568;
+  margin: 0;
+}
+
+.item-pricing-summary {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.item-unit-price {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 0 0 4px 0;
+}
+
+.item-row-subtotal {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.item-row-subtotal span {
+  color: #212121;
+  font-weight: 600;
+}
+
+.item-action-delivery {
+  flex: 1.5;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.delivery-milestone {
+  font-weight: 600;
+  color: #212121;
+  margin: 0 0 4px 0;
+}
+
+.delivery-subtext {
+  font-size: 11px;
+  color: #a0aec0;
+  display: block;
+  line-height: 1.3;
+}
+
+/* Empty State Handling UI Details */
+.empty-orders-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 20px;
+}
+
+.empty-orders-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 40px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.empty-orders-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.empty-orders-card h2 {
+  font-size: 20px;
+  color: #212121;
+  margin-bottom: 10px;
+}
+
+.empty-orders-card p {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.shop-now-btn {
+  background-color: #2874f0;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+}
+
+.shop-now-btn:hover {
+  background-color: #145cc5;
+}
+
+
+/* add for loading animation */
+
+/* Full-viewport absolute center layout mask */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* Takes up screen space naturally without breaking nav headers */
+  width: 100%;
+}
+
+/* Master relative container for positioning synchronization */
+.circular-spinner-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🟢 The Rotating Outer Ring */
+.spinner-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #3a6fc3; /* Muted dark background ring trace gap */
+  border-top: 4px solid #3b82f6; /* Accent electric blue primary tail */
+  border-right: 4px solid #06b6d4; /* Fades into a bright cyan edge tone gradient */
+  border-radius: 50%;
+  animation: spinCycle 1.2s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+/* 🟢 Central Floating Typography Content */
+.spinner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  color: #000000; /* Contrast text handling color maps */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  animation: pulseOpacity 2s ease-in-out infinite; /* Subtle text glow pulsing */
+}
+
+.spinner-text span {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.spinner-text small {
+  font-size: 12px;
+  color: #000000;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* ========================================================================
+   KEYFRAME ANIMATIONS ENGINE
+   ======================================================================== */
+
+/* Infinite rotation glide handler */
+@keyframes spinCycle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Smooth breathing text pulse effect */
+@keyframes pulseOpacity {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}

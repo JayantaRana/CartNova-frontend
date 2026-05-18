@@ -1,0 +1,277 @@
+.details-page-wrapper {
+  max-width: 1240px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.details-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.details-back-btn:hover {
+  color: #007bff;
+}
+
+/* 🏢 Two-Column Layout Grid Framework */
+.details-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* 📸 Left Section Image Layouts */
+.details-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-image-frame {
+  width: 100%;
+  max-width: 440px;
+  height: 440px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.big-image-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.big-image-frame:hover img {
+  transform: scale(1.04);
+}
+
+/* 📝 Right Section Content Typography */
+.details-info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-category-tag {
+  align-self: flex-start;
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.details-product-title {
+  font-size: 28px;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.details-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.details-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.details-tax-inclusive {
+  font-size: 13px;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+/* 🔴 BADGE STATUS CONTROLS */
+.details-stock-status {
+  margin-bottom: 24px;
+}
+
+.stock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.stock-badge.in-stock {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.stock-badge.out-of-stock {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.details-description-block {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.details-description-block h3 {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.details-description-block p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 🎯 PREMIUM HIGH-ACTION BUTTON FOOTER PANEL */
+.details-action-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: auto; /* Aligns to bottom of section container panel natively */
+}
+
+.details-action-buttons button {
+  flex: 1;
+  height: 54px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.details-add-cart {
+  background-color: #ff9f00; /* Flipkart Gold Theme hex */
+  color: #ffffff;
+}
+
+.details-add-cart:hover:not(:disabled) {
+  background-color: #f39500;
+  box-shadow: 0 4px 12px rgba(243,149,0,0.3);
+}
+
+.details-buy-now {
+  background-color: #fb641b; /* Flipkart Direct Flame Orange hex */
+  color: #ffffff;
+}
+
+.details-buy-now:hover:not(:disabled) {
+  background-color: #ea560c;
+  box-shadow: 0 4px 12px rgba(234,86,12,0.3);
+}
+
+.details-action-buttons button:disabled {
+  background-color: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Error fallback styling sheet configuration blocks */
+.details-error-view {
+  text-align: center;
+  padding: 60px 20px;
+}
+.details-error-view button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 📱 Responsive Adaptation Breakpoints */
+@media (max-width: 768px) {
+  .details-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 15px;
+  }
+  .big-image-frame {
+    height: 300px;
+  }
+  .details-product-title {
+    font-size: 22px;
+  }
+  .details-action-buttons {
+    flex-direction: column;
+  }
+}
+
+
+
+
+/* ========================================================================
+   4. RECOMMENDATIONS SECTION (Similar Products)
+   ======================================================================== */
+.similar-products-section {
+  margin-top: 50px;
+}
+
+.recommendation-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin-bottom: 30px;
+}
+
+.similar-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* Renders into a clean flat grid matching your category tab blocks */
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/* Ensures layout adjusts nicely on tablets/phones */
+@media (max-width: 600px) {
+  .similar-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+  }
+}

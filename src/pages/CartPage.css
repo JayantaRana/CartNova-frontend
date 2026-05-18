@@ -1,0 +1,191 @@
+.cart-container {
+  display: flex;
+  padding: 20px 5%;
+  background-color: #f1f3f6;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.cart-left {
+  flex: 2;
+  background: white;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+.cart-header {
+  padding: 15px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item {
+  display: flex;
+  padding: 24px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.cart-item-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.cart-item-details {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.quantity-controls {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #c2c2c2;
+  background: white;
+  cursor: pointer;
+}
+
+.quantity-controls input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #c2c2c2;
+}
+
+.remove-btn {
+  margin-left: 20px;
+  border: none !important;
+  background: transparent !important;
+  font-weight: 600;
+  color: #212121;
+}
+
+.remove-btn:hover { color: #2874f0; }
+
+.cart-right {
+  flex: 1;
+  height: fit-content;
+}
+
+.price-details {
+  background: white;
+  padding: 15px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.total-amount {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.place-order-btn {
+  width: 100%;
+  background: #fb641b;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+/* add for loading animation */
+/* Full-viewport absolute center layout mask */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* Takes up screen space naturally without breaking nav headers */
+  width: 100%;
+}
+
+/* Master relative container for positioning synchronization */
+.circular-spinner-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🟢 The Rotating Outer Ring */
+.spinner-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #3a6fc3; /* Muted dark background ring trace gap */
+  border-top: 4px solid #3b82f6; /* Accent electric blue primary tail */
+  border-right: 4px solid #06b6d4; /* Fades into a bright cyan edge tone gradient */
+  border-radius: 50%;
+  animation: spinCycle 1.2s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+/* 🟢 Central Floating Typography Content */
+.spinner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  color: #000000; /* Contrast text handling color maps */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  animation: pulseOpacity 2s ease-in-out infinite; /* Subtle text glow pulsing */
+}
+
+.spinner-text span {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.spinner-text small {
+  font-size: 12px;
+  color: #000000;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* ========================================================================
+   KEYFRAME ANIMATIONS ENGINE
+   ======================================================================== */
+
+/* Infinite rotation glide handler */
+@keyframes spinCycle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Smooth breathing text pulse effect */
+@keyframes pulseOpacity {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}

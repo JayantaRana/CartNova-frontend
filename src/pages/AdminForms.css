@@ -1,0 +1,29 @@
+.form-container { display: flex; justify-content: center; padding: 50px; background: var(--bg-grey); min-height: 100vh; }
+.form-card { background: white; padding: 30px; border-radius: 8px; width: 500px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.form-card h2 { color: var(--primary-blue); margin-bottom: 20px; }
+.form-card input, .form-card textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+.form-row { display: flex; gap: 10px; }
+.form-actions { display: flex; gap: 10px; margin-top: 10px; }
+.save-btn { flex: 2; background: var(--primary-blue); color: white; border: none; padding: 12px; font-weight: bold; cursor: pointer; }
+.cancel-btn { flex: 1; background: #eee; border: none; padding: 12px; cursor: pointer; }
+.status-msg { margin-top: 15px; text-align: center; font-weight: bold; color: #2e7d32; }
+
+
+/* add for edit product */
+
+.form-card label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.status-msg.error {
+  color: #d32f2f;
+}
+
+.status-msg.success {
+  color: #2e7d32;
+}
