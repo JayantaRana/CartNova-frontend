@@ -38,7 +38,7 @@ const Login = () => {
           navigate('/'); // Redirect to Home for customers
         }
         // Forces a refresh so the Navbar updates the "Hi, {User}" text
-        window.location.reload();
+        // window.location.reload();
       }, 1000);
 
     } catch (error) {
