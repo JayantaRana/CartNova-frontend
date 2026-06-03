@@ -40,7 +40,7 @@ const AdminLogin = () => {
 
       setTimeout(() => {
         navigate('/admin-dashboard');
-        window.location.reload(); 
+        // window.location.reload(); 
       }, 1500);
 
     } catch (error) {
